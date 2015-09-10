@@ -1,0 +1,22 @@
+<div class="row">
+  <%@inventory.each do |furniture_item| %>
+  <% itm = furniture_item.props %>
+  <div class="col-sm-4 col-md-2">
+    <div class="thumbnail">
+       <% fp_string = "products/#{itm["img-file"]}.jpg"%>
+       <% path_to_img = asset_path(fp_string)%>
+      <img src="<%=path_to_img%>" alt="...">
+      <div class="caption">
+        <h3><%= itm["item"] %> 
+	        <% if itm["on_clearance"] == true %> 
+	        <small><br><%= "On Clearance!" %></small>
+	        <% end %>
+       </h3>
+
+        <p>$<%= itm["price"] %> </p>        
+        <p> <a href="/main/single/<%=itm["pid"]%>"class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
