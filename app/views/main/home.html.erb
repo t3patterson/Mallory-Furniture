@@ -1,14 +1,14 @@
 	
 <div class="jumbotron intro-page">
   <h2>Your Furniture Is Not Very Cool</h2>
-  <p>Our is.</p>
+  <p>Ours is.</p>
   <p><a href="./multi" class="btn btn-default" role="button">Check us out</a></p>
 </div>
 
 <div class="container select-categories">
 	<div class="row">
 		 <% @category_collection_hash.each do |key,cat_list| %>
-		<div class="col-xs-offset-2 col-xs-8 col-sm-4 category-options">
+		<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 category-options">
 			<div class="stretchy-wrapper">
 				<h3><%=key%></h3>
 			</div>
