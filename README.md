@@ -1,14 +1,15 @@
 #Mallory Furniture
 
 ###Description
-Mallory Furniture is a local vintage furniture retailer with a constantly changing selection. Their showroom has limited floor space so they initially built a site to show all their inventory, including those in the warehoue.
+Mallory Furniture is a local vintage furniture retailer with a constantly changing selection. Their showroom has limited floor space so they initially built a website to show all their inventory, including those in the warehoue.
 
-They decided not to go the e-commerce route so they only need static pages to show what product they currently have. Regardless, they've found maintaining the site to be to be a pain in the ass since they can't easily synchronize the items on the page with the continuously changing items in stock.
+They decided not to go the e-commerce route since they only need static pages to show what product they currently have. Regardless, they've found maintaining the site to be to be a pain in the ass since they can't easily synchronize the items on the page with the continuously changing items in stock.
 
-They've kept good records in an Excel spreadsheet and they are wondering if there is an easier way to keep their site up to date as their inventory changes.
+They've kept good records in an Excel spreadsheet and they are wondering if there is an easier way to keep their website up to date as their inventory changes.
 
 ###Requirements
-**Make a Rails app that generates static pages of their current inventory based on data imported from a `.csv` file.**
+> **Make a Rails app that generates static pages of Mallory Furniture's current inventory based on data imported from a `.csv` file.**
+
 
 ####Normal Mode
 There should be 3 types of pages: the home page, a page that shows multiple-products, and a single-product page. Your Rails app should handle the routing, controller logic, and view rendering based on how the user navigates the site.
