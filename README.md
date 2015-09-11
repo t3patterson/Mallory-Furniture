@@ -7,6 +7,22 @@ They decided not to go the e-commerce route since they only need static pages to
 
 They've kept good records in an Excel spreadsheet and they are wondering if there is an easier way to keep their website up to date as their inventory changes.
 
+###Objectives
+####Learning Objectives
+After completing this assignment you should understand:
+- How dynamic webpages work on the web
+- How URL's determine the initial behavior of your application.
+- Understand the concept of Model-View-Controller (MVC) architecture.
+- The rails asset pipeline for including stylesheets and image assets in your Rais app.
+
+####Performance Objectives
+After completing this assignment you should be able to
+- Create a Rails app.
+- Use the Router to have a dynamic set of pages.
+- Use the Controller to import data, manipulate data, and pass it to the View to render. 
+- Write ruby code inside the View (the `«view_name».html.erb` template) to display data dynamically. 
+- Integrate static assets like images, and `.css` stylesheets into your app for output/presentation.
+
 ###Requirements
 > **Make a Rails app that generates static pages of Mallory Furniture's current inventory based on data imported from a `.csv` file.**
 
