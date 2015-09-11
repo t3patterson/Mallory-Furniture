@@ -1,7 +1,27 @@
-<h3>One Furniture Item</h3>
-<div>
-<img src="http://lorempixel.com/400/300/city/">
+<% itm = @single_listing.props%>
+
+<div class="container full-product">
+	<div class="row">
+		<div class="col-sm-8">
+			<% fp_string = "products/#{itm['img-file']}.jpg"%>
+			<% path_to_img = asset_path(fp_string)%>
+			<img src="<%=path_to_img%>">
+		</div>
+		<div class="col-sm-4">
+			<h3><%=itm["item"] %></h3>
+			
+			<h4 class='price-label'>Price</h4>
+			<p>$<%=itm["price"]%></p>
+			<p><small></small></p>
+
+			<h4>Description</h4>
+			<p><%=itm['description']%></p>
+
+			<h4>Dimensions</h4>
+			<p>Width: <%=itm['dimension_w']%></p>
+			<p>Length: <%=itm['dimension_l']%></p>
+			<p>Height: <%=itm['dimension_h']%></p>
+			
+		</div>
+	</div>
 </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nisi?</p>
-<p>Price: $xxxx</p>
-<p>category</p>

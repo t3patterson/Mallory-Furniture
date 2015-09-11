@@ -3,16 +3,27 @@
 <head>
   <title>Mallory Furniture</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,700|Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>
-	Mallory Furniture
-</h1>
+<header>
+	<h1>
+		Mallory Furniture
+	</h1>
+</header>
+
 <%= yield %>
+
+<a class="go-home" href="./../home">
+	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+</a>
+<a class="go-back" href="./../multi">
+  <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+</a>
 
 </body>
 </html>

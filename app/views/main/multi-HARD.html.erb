@@ -1,14 +1,13 @@
-
     <div class="container multi-listing">
     <%@category_collection_hash.each do |key,cat_list| %>
         <div class="row">
           <div class="col-xs-12 cat-label">
-            <h2><%=key.upcase%></h2>
+            <h2><%=key%></h2>
           </div>
         </div>
         <div class="row">
       <%cat_list.each do |itm|%>
-        <div class="col-xs-12 col-sm-4 col-md-3 listing">
+        <div class="col-sm-4 col-md-3 listing">
             <div class="thumbnail">
 
                <% fp_string = "products/#{itm["img-file"]}.jpg"%>

@@ -1,3 +1,136 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$my_blue: #2c3e50;
+$my_red: #c0392b;
+$my-green: #16a085;
+$my-yellow: #f1c40f;
+
+*, *:after, *:before{
+  box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+
+h1,h2{
+	font-family: 'Alegreya', 'Palatino',serif;
+}
+
+h3,h4,h5,h6, p, a, button, span{
+	font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+}
+
+header {
+	position: relative;
+	h1{
+		background: $my-blue;
+		color: #fff;
+		padding: 2rem;
+		text-align: center;
+	}
+}
+
+.go-home{
+		padding: 2rem;
+		display: block;
+		position: fixed;
+		top: 0%  ; right: 0%;
+		color: #fff;
+		font-size: 30px;
+		background: $my-green;
+		z-index: 100;
+}
+
+.intro-page ~ .go-home,
+.intro-page ~ .go-back {
+	display: none;
+}
+
+.go-back{
+		padding: 2rem;
+		display: block;
+		position: fixed;
+		top: 83px  ; right: 0%;
+		color: #fff;
+		font-size: 30px;
+		background: maroon;
+		z-index: 102;
+}
+
+
+.intro-page{
+	text-align: right;
+	padding: 1rem;
+}
+
+.select-categories{
+	text-align: center;
+	width: auto;
+    height: auto;
+
+    .category-options{
+    	margin-bottom: 2rem;
+    }
+
+    .stretchy-wrapper{
+    	width: 100%;
+		padding-bottom: 56.25%; /* 16:9 */
+		position: relative;
+		background: $my_red;
+		border: 1px solid #333;
+
+		> *{
+			position: absolute;
+			top: 50%; bottom: 0; left: 0; right: 0;
+			transform: translateY(-50%);
+			color: white;
+			font-size: 24px;
+			text-align: center;
+		}
+    }
+}
+
+
+
+.multi-listing{
+	.listing {
+		height: 600px;
+	}
+
+	h2{
+		background: #eee;
+		padding-left: .5rem;
+	}
+
+}
+
+.full-product{
+	h3,h4{padding-left: .5rem;}
+	h3{	background: $my-yellow; }
+	
+	h4{ background: #eee;}
+
+	.price-label{ background: lighten($my-green, 50%);}
+}
+
+h2{
+	padding: 1rem 0;
+}
+
+@media screen and (min-width: 690){
+	.multi-listing{
+		.listing {
+			height: 550px;
+		}
+
+		h2{
+			background: #eee;
+			padding-left: .5rem;
+		}
+	}	
+
+}

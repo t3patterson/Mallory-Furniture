@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   get 'main/multi'
 
-  get 'main/single/:id'
+  get 'main/single/:id' => 'main#single'
 
+  root 'main#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

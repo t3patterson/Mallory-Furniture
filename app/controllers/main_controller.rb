@@ -2,7 +2,7 @@ require 'csv'
 require 'pp'
 "pid,item,description,price,condition,dimension_w,dimension_l,dimension_h,img-file,quantity"
 
-
+	
 class FurnitureItem
 	def initialize(item)
 	  shud_b_ints = ["pid","price","dimension_w","dimension_h","dimension_l","quantity"]
@@ -44,7 +44,24 @@ end
 
 class MainController < ApplicationController
   def home
-    
+  	 @inventory = []
+
+    CSV.foreach('./data-import/mf_inventory.csv', headers: true) do |row|
+      @inventory.push(FurnitureItem.new(row.to_hash))
+    end
+
+     @category_collection_hash = @inventory.reduce({}) do |cat_coll, item|
+    	itm = item.props
+
+    	if cat_coll.has_key?(itm["category"]) == false
+    		cat_coll.merge!({"#{itm['category']}"=> [] })
+    	end
+
+    	cat_coll["#{itm['category']}"].push(itm)
+    	cat_coll
+    end
+
+
   end
 
   def multi
@@ -53,6 +70,19 @@ class MainController < ApplicationController
     CSV.foreach('./data-import/mf_inventory.csv', headers: true) do |row|
       @inventory.push(FurnitureItem.new(row.to_hash))
     end
+
+    puts "-"*20
+
+    @category_collection_hash = @inventory.reduce({}) do |cat_coll, item|
+    	itm = item.props
+
+    	if cat_coll.has_key?(itm["category"]) == false
+    		cat_coll.merge!({"#{itm['category']}"=> [] })
+    	end
+
+    	cat_coll["#{itm['category']}"].push(itm)
+    	cat_coll
+    end       
 
   end
 
@@ -64,7 +94,9 @@ class MainController < ApplicationController
     end
 
     @single_listing = @inventory.find do |item|
-      item['pid']==params.id
+      item.props['pid']==params["id"].to_i
     end
+
+    puts @single_listing
   end
 end
