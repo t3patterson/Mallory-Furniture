@@ -18,12 +18,20 @@
 
 <%= yield %>
 
-<a class="go-home" href="./../home">
+<%=link_to({:action => "home" },{:class => "go-home"}) do %>
 	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-</a>
-<a class="go-back" href="./../multi">
+<%end%>
+
+<% if params["action"] == "single" 
+   lnk = 'multi'
+   else
+   lnk = 'home'
+   end
+%>
+
+<%=link_to({:action => lnk },{:class => "go-back"}) do %>
   <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-</a>
+<% end %>
 
 </body>
 </html>

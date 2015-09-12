@@ -1,8 +1,14 @@
 	
 <div class="jumbotron intro-page">
-  <h2>Your Furniture Is Not Very Cool</h2>
-  <p>Ours is.</p>
-  <p><a href="./main/multi" class="btn btn-default" role="button">Check us out</a></p>
+	<div class="content-overlay">
+	</div>
+
+	<div class='content'>
+	  <h2>Your Furniture is Old</h2>
+	  <p>Ours is older.</p>
+	  <p>
+	  <%=link_to("Check our products",{:action => 'multi'},{:class => "btn btn-primary", :role=>"button"})%>
+	</div>
 </div>
 
 <div class="container select-categories">
