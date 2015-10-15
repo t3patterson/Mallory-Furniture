@@ -1,6 +1,6 @@
 require 'csv'
 require 'pp'
-"pid,item,description,price,condition,dimension_w,dimension_l,dimension_h,img-file,quantity"
+"pid,item,description,price,condition,dimension_w,dimension_l,dimension_h,img_file,quantity"
 
 	
 class FurnitureItem
@@ -81,9 +81,7 @@ class MainController < ApplicationController
     	end
 
     	cat_coll["#{itm['category']}"].push(itm)
-    	cat_coll
     end       
-
   end
 
   def single

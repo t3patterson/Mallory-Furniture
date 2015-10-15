@@ -3,7 +3,7 @@
 <div class="container full-product">
 	<div class="row">
 		<div class="col-sm-8">
-			<% fp_string = "products/#{itm['img-file']}.jpg"%>
+			<% fp_string = "products/#{itm['img_name']}.jpg"%>
 			<% path_to_img = asset_path(fp_string)%>
 			<img src="<%=path_to_img%>">
 		</div>

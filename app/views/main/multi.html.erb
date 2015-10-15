@@ -11,7 +11,7 @@
         <div class="col-xs-12 col-sm-4 col-md-3 listing">
             <div class="thumbnail">
 
-               <% fp_string = "products/#{itm["img-file"]}.jpg"%>
+               <% fp_string = "products/#{itm["img_name"]}.jpg"%>
                <% path_to_img = asset_path(fp_string)%>
 
               <img src="<%=path_to_img%>" alt="...">
